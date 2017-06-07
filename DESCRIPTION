@@ -1,6 +1,6 @@
 Package: dcemriS4
 Version: 0.57.1
-Date: 2016-09-23
+Date: 2017-02-02
 Title: A Package for Image Analysis of DCE-MRI (S4 Implementation)
 Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),		     email = "bwhitcher@gmail.com"),	      person("Volker", "Schmid", role = "aut",	        email="volker.schmid@lmu.de"),	      person("Andrew", "Thornton", role = "ctb",		     email = "zeripath@gmail.com"))
 Depends:    R (>= 2.14.0),    minpack.lm,    oro.nifti (>= 0.5.0)
@@ -14,7 +14,7 @@ License: BSD_3_clause + file LICENSE
 URL: http://www.dcemri.com/,    http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1
 Remotes: neuroconductor/oro.nifti@ab8a1e9b60bce9e7e48984a37e7dce607f51fdb0, neuroconductor/oro.dicom@130a4ba490338839ada75b7625b42b4f63b0f6f0
 biocViews:
 
