@@ -15,6 +15,6 @@ URL: http://www.dcemri.com/,    http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
 RoxygenNote: 5.0.1
+Remotes: neuroconductor/oro.nifti@a65aea408c7ecc4ef10a86f3138ad15ad33c9038, neuroconductor/oro.dicom@130a4ba490338839ada75b7625b42b4f63b0f6f0
 biocViews:
-Remotes: neuroconductor/oro.nifti@24844d811d488ba6f7a1dde3ec84d1a2698c15fa, neuroconductor/oro.dicom@130a4ba490338839ada75b7625b42b4f63b0f6f0
 
