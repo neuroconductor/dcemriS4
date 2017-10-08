@@ -4,17 +4,6 @@
 ^README.md
 
 ^appveyor\.yml$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+^DESCRIPTION\.bak$
+^\./\.travis\.yml\.bak$
+^\./appveyor\.yml\.bak$

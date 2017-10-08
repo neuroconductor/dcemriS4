@@ -3,9 +3,15 @@ Version: 0.57.1
 Date: 2017-02-02
 Title: A Package for Image Analysis of DCE-MRI (S4 Implementation)
 Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),		     email = "bwhitcher@gmail.com"),	      person("Volker", "Schmid", role = "aut",	        email="volker.schmid@lmu.de"),	      person("Andrew", "Thornton", role = "ctb",		     email = "zeripath@gmail.com"))
-Depends:    R (>= 2.14.0),    minpack.lm,    oro.nifti (>= 0.5.0)
-Suggests:    bitops,    splines,    XML,    oro.dicom (>= 0.5.0),    testthat
-Imports:    utils,    parallel,    methods
+Depends: R (>= 2.14.0),    minpack.lm,    oro.nifti (>= 0.5.0)
+Suggests: 
+    bitops,
+    splines,
+    XML,
+    oro.dicom (>= 0.5.0),
+    testthat,
+    covr
+Imports: utils,    parallel,    methods
 Description: A collection of routines and documentation that allows one to
     perform voxel-wise quantitative analysis of dynamic contrast-enhanced MRI
     (DEC-MRI) and diffusion-weighted imaging (DWI) data, with emphasis on
@@ -15,6 +21,6 @@ URL: http://www.dcemri.com/,    http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
 RoxygenNote: 5.0.1
-Remotes: neuroconductor/oro.nifti@a3e10fbd070ba2b44c00dbe17942546b666acddd, neuroconductor/oro.dicom@6d4b6c11eef46048f3de10f827b15c7ad7a6443a
 biocViews:
-
+Remotes: neuroconductor/oro.nifti@c25f6bcb1200506a3e39127f550bcca7766b0107,
+    neuroconductor/oro.dicom@a59a6cf8c3c892946f8ce8355203b1545aa8b02f
