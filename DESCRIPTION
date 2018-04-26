@@ -2,25 +2,23 @@ Package: dcemriS4
 Version: 0.57.1
 Date: 2017-02-02
 Title: A Package for Image Analysis of DCE-MRI (S4 Implementation)
-Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),		     email = "bwhitcher@gmail.com"),	      person("Volker", "Schmid", role = "aut",	        email="volker.schmid@lmu.de"),	      person("Andrew", "Thornton", role = "ctb",		     email = "zeripath@gmail.com"))
-Depends: R (>= 2.14.0),    minpack.lm,    oro.nifti (>= 0.5.0)
-Suggests: 
-    bitops,
-    splines,
-    XML,
-    oro.dicom (>= 0.5.0),
-    testthat,
-    covr
-Imports: utils,    parallel,    methods
-Description: A collection of routines and documentation that allows one to
-    perform voxel-wise quantitative analysis of dynamic contrast-enhanced MRI
-    (DEC-MRI) and diffusion-weighted imaging (DWI) data, with emphasis on
-    oncology applications.
+Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),
+        email = "bwhitcher@gmail.com"), person("Volker", "Schmid", role
+        = "aut", email="volker.schmid@lmu.de"), person("Andrew",
+        "Thornton", role = "ctb", email = "zeripath@gmail.com"))
+Depends: R (>= 2.14.0), minpack.lm, oro.nifti (>= 0.5.0)
+Suggests: bitops, splines, XML, oro.dicom (>= 0.5.0), testthat, covr
+Imports: utils, parallel, methods
+Description: A collection of routines and documentation that allows one
+        to perform voxel-wise quantitative analysis of dynamic
+        contrast-enhanced MRI (DEC-MRI) and diffusion-weighted imaging
+        (DWI) data, with emphasis on oncology applications.
 License: BSD_3_clause + file LICENSE
-URL: http://www.dcemri.com/,    http://dcemri.blogspot.com/
+URL: http://www.dcemri.com/, http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
 RoxygenNote: 5.0.1
 biocViews:
-Remotes: neuroconductor/oro.nifti@36474ce8faeb769d00c7bab606f9bb1ca46ccba8,
-    neuroconductor/oro.dicom@996b1dd0db67644dbd55dafe196871eb9843de31
+Remotes:  
+    neuroconductor/oro.nifti@654f99fc85fdaf21253e3eca6bfb1678d46f41c9,
+    neuroconductor/oro.dicom@596cf1374c4cd1cf5c40208973b50316a07fb62a
