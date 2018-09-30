@@ -7,13 +7,7 @@ Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),
         = "aut", email="volker.schmid@lmu.de"), person("Andrew",
         "Thornton", role = "ctb", email = "zeripath@gmail.com"))
 Depends: R (>= 2.14.0), minpack.lm, oro.nifti (>= 0.5.0)
-Suggests: 
-    bitops,
-    splines,
-    XML,
-    oro.dicom (>= 0.5.0),
-    testthat,
-    covr
+Suggests: bitops, splines, XML, oro.dicom (>= 0.5.0), testthat, covr
 Imports: utils, parallel, methods
 Description: A collection of routines and documentation that allows one
         to perform voxel-wise quantitative analysis of dynamic
@@ -24,6 +18,6 @@ URL: http://www.dcemri.com/, http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
 RoxygenNote: 5.0.1
-Remotes:  
-    neuroconductor/oro.nifti@b494570240aa1a8c40b7a36f4bfb10ffcf44b765
-biocViews: 
+biocViews:
+Remotes: 
+    neuroconductor/oro.nifti@abbfadf8976d2c29f518c76580d9095d3994439e
