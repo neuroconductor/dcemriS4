@@ -8,6 +8,8 @@ dist: trusty
 addons:
   apt:
     packages:
+    - libcurl4-openssl-dev
+    - libxml2-dev
     - libfftw3-dev
     - libgsl0-dev
     - libgsl0ldbl
@@ -44,6 +46,10 @@ before_install:
 - jags_install ;
 - v8_install ;
 - dcmtk_install ;
+- export cmake_version="3.11"
+- cmake --version
+- x=`cmake_setup`; echo "${x}"; eval ${x};
+- cmake --version
 - remove_neuroc_packages
 - cat DESCRIPTION
 - install_remotes_no_dep
@@ -51,7 +57,8 @@ before_install:
 - export PACKAGE_NAME=`package_name`
 - echo "Package Name is $PACKAGE_NAME"
 - if [[ "${PACKAGE_NAME}" == "waveslim" ]]; then fftw_install ; fi
-- if [[ "${PACKAGE_NAME}" == "dti" ]]; then gsl_install ; fi
+- if [[ "${PACKAGE_NAME}" == "dti" || "${PACKAGE_NAME}" == "qMRI" ]]; then gsl_install
+  ; fi
 - if [[ "${PACKAGE_NAME}" == "ROpenCVLite" || "${PACKAGE_NAME}" == "Rvision" ]]; then
   shopt -s expand_aliases ; x=`Rscript -e "cat(Sys.which('R'))"` ; echo "reset R"
   ; alias R="travis_wait 100 ${x}" ; fi
@@ -79,7 +86,7 @@ deploy:
   on:
     tags: true
   api-key:
-    secure: NSMNrCJpFg/MMdwMmtFFtfYcc2I7BBAM+l98eK/cLoJAbfnLFuKEefpS6pu9aRa3/mQr1Q39u0BwW4H5Kfjc+7SxYDCgo1WInvrgzOZm2bvYr816rd59J4H4ya9osYlFFTu5gc9MDuyLLFd3bEIBb2sia4ur3fu2E6/lfQUcsqS1b4uX1DPAEVhX8Ydt80quZpxHjVgcg7tXkNG8YYfOUXYjU4sr+g8fquI9CEybqch9sspvayGGBd2/u7xT8wAwoO9SW0ywF6B6CDhPNvvLlz2f0FT+FnhKOdQKCJ7pqbKd2IJnT8VTstnw+ThNhefZnw9MwCDfNEBCGP9LrNbtKoiYMzwVE8RtsKcckU55aUN8+/fBbcPPZiY2W2/rrPsXlF1gFIJ5EISLY93G1BB8YDGYvqgIWBoo1qr2gXoU0tYKfishqkmzb1gJiZuan92dUQmF205b81oqB22EAK0B1OJX3va+PjOMiwN7WyFeAXD8rCF6rhZjhVbUJYxJVr4mTbI4QpICdRErWHQzaqtKJIWAUlazcXzWF8wvX57a9/G+AC1nxcG6TxlliErPwD5RkbAD3B39ebGke5uWu7X/3oUgnEt74oXUZKLOaEmV5uNUoMW/a+IGtBeHzBCAkfh4JSEb2+G8B4GF5oaJ7RpWyA1tN8/4pd7BTxOBpyf+EYU=
+    secure: iGycE+x8ljs5ggS86hMoSzRP6lvN24HSBAODe/WDR1ZF7b2fwusMpH++5Dn1UDh40sIrwEze6Lszk/ogshFhC4FqKIk6PNQ4oWn7jrKz31ZwGeWBFv6t/ZkQRerHF4HM8DM4i7hBo9RvFisBRV+lX0yi7r1FX/9U2kVKk91nyKi2I1aq3Z9g5qqeXXZGO+v8wHD8C+1NuYjMridEkwJqKujA82IP77cgn1afUihpr4YgK13c4SR6ccFULDTXf+mB+Ktd2TOqYCU0J0v06fnkyZDxuhqFqcTIxI+9Z7WOrYAgtceQh4Rg72QaT4CPoddneKWrQgluH+KQ9yMObO9Yw78maAQ2YZoy9E0Tb8nae0d8pAAn8lI+zmfD8ZnrW6t4ZfEfGqAfdoV3n5DcaBE8Qt4A8scGRfW3+hYZyDt+P3OIge+tMs8eaC2b4FNk2nQjapNkNRsHqC900AxWJM7xZITc6aeeuainm7qkEd4oanV6M7ZsPar2k/7s0J58huc9yYxZdukcdNv+YdnHw0nYvkteap6DxmwZvLPd3TnH553eUFumHaeGsui1rdlEeoklR1lmIbhCPczoz92hjS9zkyizd8JB/ohvpN56fUC9CHSgAN3Nvuu+HuGS2DzHZLc1Qmi0AMM5IQCBg/MoIHasaSlUs3Ye2Wu5IikRR5U1qZo=
 after_deploy:
 - if [[ "${TRAVIS_OS_NAME}" == "linux" && ${TRAVIS_R_VERSION_STRING} = "release" ]];
   then echo 'covr::coveralls(type = "all", quiet = FALSE)' > neuroc_covr.R ; travis_wait
