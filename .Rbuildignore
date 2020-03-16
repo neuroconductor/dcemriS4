@@ -3,3 +3,5 @@
 ^\.travis\.yml$
 ^README.md
 ^\.idea
+^DESCRIPTION\.bak$
+^\./\.travis\.yml\.bak$
