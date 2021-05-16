@@ -3,32 +3,29 @@ Version: 0.57.2
 Date: 2020-02-13
 Title: A Package for Image Analysis of DCE-MRI (S4 Implementation)
 Authors@R: c(person("Brandon", "Whitcher", role = c("aut", "cre"),
-		     email = "bwhitcher@gmail.com"),
-	      person("Volker", "Schmid", role = "aut",
-	        email="volker.schmid@lmu.de"),
-	      person("Andrew", "Thornton", role = "ctb",
-		     email = "zeripath@gmail.com"))
-Depends:
-    R (>= 2.14.0),
-    minpack.lm,
-    oro.nifti (>= 0.5.0)
-Suggests:
+        email = "bwhitcher@gmail.com"), person("Volker", "Schmid", role
+        = "aut", email="volker.schmid@lmu.de"), person("Andrew",
+        "Thornton", role = "ctb", email = "zeripath@gmail.com"))
+Depends: R (>= 2.14.0), minpack.lm, oro.nifti (>= 0.5.0)
+Suggests: 
     bitops,
     splines,
     XML,
     oro.dicom (>= 0.5.0),
-    testthat
-Imports:
-    utils,
-    parallel,
-    methods
-Description: A collection of routines and documentation that allows one to
-    perform voxel-wise quantitative analysis of dynamic contrast-enhanced MRI
-    (DEC-MRI) and diffusion-weighted imaging (DWI) data, with emphasis on
-    oncology applications.
+    testthat,
+    covr
+Imports: utils, parallel, methods
+Description: A collection of routines and documentation that allows one
+        to perform voxel-wise quantitative analysis of dynamic
+        contrast-enhanced MRI (DEC-MRI) and diffusion-weighted imaging
+        (DWI) data, with emphasis on oncology applications.
 License: BSD_3_clause + file LICENSE
-URL: http://www.dcemri.com/,
-    http://dcemri.blogspot.com/
+URL: http://www.dcemri.com/, http://dcemri.blogspot.com/
 LazyData: true
 LazyDataCompression: gzip
 RoxygenNote: 7.0.2
+Repository: Neuroconductor
+Remotes: 
+    neuroconductor/oro.nifti@bd06b05d2a090c743e51d745a826e8b77af278f0,
+    neuroconductor/oro.dicom@7f1fd6a4f7c63754e62fb7246e4ff8e63222bf7c
+biocViews: 
